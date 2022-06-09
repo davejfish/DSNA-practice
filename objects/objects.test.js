@@ -2,6 +2,7 @@ import {
     addTwoNumbers,
     makePet,
     formatWork,
+    inputOutput,
 } from './objects.js';
 
 const test = QUnit.test;
@@ -45,4 +46,24 @@ test('testing formatWork', (expect) => {
             work: 'the best book',
             writer: 'natsume souseki',
         });
+});
+
+test('creating the output with the input', (expect) => {
+    const data = {
+        work: 'the best book',
+        writer: 'Natsume Souseki'
+    };
+
+    expect.deepEqual(
+        inputOutput(data), 
+        {
+            author: {
+                last: 'Souseki',
+                first: 'Natsume'
+            },
+            book: {
+                title: 'the best book'
+            }
+        }
+    );
 });

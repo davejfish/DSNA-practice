@@ -19,3 +19,19 @@ export function formatWork(book) {
     result.writer = `${book.author.first} ${book.author.last}`;
     return result;
 }
+
+export function inputOutput(info) {
+    const [first, last] = info.writer.split(' ');
+    const title = info.work;
+
+    const result = {
+        author: {
+            last,
+            first
+        },
+        book: {
+            title
+        }
+    };
+    return result;
+}
