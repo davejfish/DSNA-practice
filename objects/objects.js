@@ -1,4 +1,3 @@
-
 export function addTwoNumbers(x, y) {
     return x + y;
 }
@@ -12,4 +11,11 @@ export function makePet(name, type, age, food, toys) {
     pet.toys = toys;
 
     return pet;
+}
+
+export function formatWork(book) {
+    let result = {};
+    result.work = book.book.title;
+    result.writer = `${book.author.first} ${book.author.last}`;
+    return result;
 }
