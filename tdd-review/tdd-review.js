@@ -28,7 +28,6 @@ export function inventoryChecker(object, item) {
 
     for (let i in object) {
         if (i === itemValue[0]) {
-            print(i.value);
             return `running low on waffles`;
         }
     }
