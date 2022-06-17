@@ -4,6 +4,7 @@ import {
 } from './operators.js';
 
 const test = QUnit.test;
+QUnit.module('operators');
 
 test('adds two numbers', (expect) => {
     //Arrange
