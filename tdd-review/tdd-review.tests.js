@@ -51,19 +51,23 @@ test('return the first key and last value', (expect) => {
 }) ;
 
 test('inventory checker test', (expect) => {
-    // Arrange, Act, Assert
     const inventory = {
         eggs: 20,
         bananas: 10,
         waffles: 2.
     };
 
-    const item = {
+    let item = {
         itemName: 'waffles'
     };
 
-    const actual = inventoryChecker(inventory, item);
-    const expected = 'running low on waffles';
+    let actual = inventoryChecker(inventory, item);
+    let expected = 'running low on waffles';
 
+    expect.equal(actual, expected);
+
+    item = { itemName: 'bananas' };
+    actual = inventoryChecker(inventory, item);
+    expected = 'all good';
     expect.equal(actual, expected);
 });

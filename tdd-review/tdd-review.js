@@ -25,10 +25,11 @@ export function firstKeyLastValue(object) {
 export function inventoryChecker(object, item) {
 
     const itemValue = Object.values(item);
+    const value = itemValue[0];
 
     for (let i in object) {
-        if (i === itemValue[0]) {
-            return `running low on waffles`;
+        if (i === value) {
+            return (object[i] < 5 ? `running low on ${i}` : 'all good');
         }
     }
 }
